@@ -2,3 +2,7 @@ Notes on Terminal Commands
 
 ls: lists every file/folder in current directory
 cd: changes directory
+mkdir [name]: creates a new folder
+pwd: shows current directory (where you are)
+cd ..: moves up one directory
+
