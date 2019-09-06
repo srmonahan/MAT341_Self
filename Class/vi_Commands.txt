@@ -1,0 +1,8 @@
+vi Commands
+
+i: lets you begin editing the text file
+esc: ends your ability to edit the text file
+:#: brings you to a specific line number
+:w: saves the file
+:q: closes the vi file
+
