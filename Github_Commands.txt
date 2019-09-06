@@ -1,5 +1,0 @@
-Github Commands
-
-1) git add [file/folder name]
-2) git commit -m ""
-3) git push
