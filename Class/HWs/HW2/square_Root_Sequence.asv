@@ -1,0 +1,16 @@
+function val = square_Root_Sequence(m, n)
+
+tol = 10^(-10);
+dif = 1;
+
+while dif > tol
+    
+    tn = sqrt(m);
+    
+    for i = 1:n
+        
+        tn = sqrt(m + (-1)^n * tn);
+        
+    end
+    
+    n = n 
