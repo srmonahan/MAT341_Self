@@ -1,5 +1,5 @@
 function lcm_val = calculate_LCM(x, y)
-
+ 
 xvec = [x:x:x*y];
 % vector of all of the multiples of x until x*y
 
