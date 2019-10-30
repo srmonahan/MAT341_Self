@@ -13,7 +13,7 @@ f1 = f(x1);
 f2 = f(x2);
 % plugs in the x1 and x2 values to the function below to find their
 % y-values
-count = 0;
+N = 0;
 % initializes the iteration counter
 
 while (b - a) > tol
@@ -49,16 +49,12 @@ while (b - a) > tol
         
     end
     
-    count = count + 1;
+    N = N + 1;
     
 % adds 1 to the iteration counter until the minimum if found with the given
 % tolerance
     
 end
-
-count
-
-% prints the final iteration count at the end of the program
 
 function val = f(x)
 

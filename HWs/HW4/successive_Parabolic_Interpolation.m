@@ -1,12 +1,13 @@
-function successive_Parabolic_Interpolation(tol)
+function N = successive_Parabolic_Interpolation(tol)
 
 x1 = 0;
 x2 = 0.6;
 x3 = 1.2;
 % sets initial points to test
+%%% x3 has been changed for #3
 err = 1;
 % initializes an error that will be adjusted based on the function values
-itcount = 0;
+N = 0;
 % initializes an iteration counter
 
 while err > tol
@@ -28,13 +29,10 @@ while err > tol
 % reassigns the points being tested to include the vertex in the matrix, A
     err = abs(x3 - x1);
 % calculates the error as the distance between x1 and x3
-    itcount = itcount + 1;
+    N = N + 1;
 % adds 1 to the counter for each iteration run
     
 end
-
-itcount
-% prints the number of iterations it took to calculate the minimum
 
 function val = f(x)
 val = 0.5 - x*exp(-x^2);
