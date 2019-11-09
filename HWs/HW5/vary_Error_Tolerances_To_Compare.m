@@ -1,0 +1,41 @@
+function vary_Error_Tolerances_To_Compare()
+
+errTolVec = [1e-1 1e-2 1e-3 1e-4 1e-5 1e-6 1e-7 1e-8 1e-9 1e-10 1e-11 1e-12];
+% sets all the error tolerances that will be tested
+
+for i = 1 : length(errTolVec)
+    
+    tol = errTolVec(i);
+% calls one error tolerance to test each iteration
+    
+    goldVec(i) = golden_Search(tol);
+% stores the number of iterations used to find the minimum using
+% golden_Search
+    paraVec(i) = successive_Parabolic_Interpolation(tol);
+% stores the number of iterations used to find the minimum using
+% successive_Parabolic_Interpolation
+    newtVec(i) = Newtons_1D_Opt(tol);
+% stores the number of iterations used to find the minimum using Newton's method
+
+end
+
+goldVec
+paraVec
+newtVec
+
+semilogx(errTolVec, goldVec, '-b', 'LineWidth', 5)
+hold on
+loglog(errTolVec, paraVec, '-r', 'LineWidth', 5)
+loglog(errTolVec, newtVec, '-k', 'LineWidth', 5)
+legend('Golden Search' , 'Successive Parabolic Interpolation' , 'Newton Method')
+xlabel('Error Tolerance');
+ylabel('Number of Iterations, N');
+hold off
+
+%%% a) For less accurate tolerances, the successive parabolic interpolation
+%%% and Newton's method converge fastest.
+%%% b) When the accuracy threshold is increased Newton's method
+%%% consistently takes the fewest iterations, by far. Next fastest for
+%%% higher accuracies is golden search with successive parabolic
+%%% interpolation quickly falling to last place.
+%%% c) The inital guesses change the convergence rate of the algorithms.
