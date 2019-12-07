@@ -22,3 +22,8 @@ plot(NVec , gausop , '-b' , 'LineWidth' , 5);
 xlabel("N");
 ylabel("Operation Count");
 % plots and labels the axes of the regular axes graph
+
+%%% a) The plot appears to be quadratic which makes sense because to row
+%%% reduce a matrix you go through all the rows and all the columns. So say
+%%% it takes n operations to go through all the columns, you then still go
+%%% through all the rows.
