@@ -1,0 +1,22 @@
+function fit_Polynomial_Series()
+
+N = 50;
+xData = linspace(-2*pi, 2*pi, N);
+yData = cos(xData)';
+err = 0;
+
+for i = 1: length(x) 
+    A = [ 1 xData(i)];
+end
+
+bvec = inv(A.' * A) * A.' * yData;
+
+for j = 0:12
+    k = bvec(i) * xData
+
+
+
+
+
+
+err = yData - A * bvec;
