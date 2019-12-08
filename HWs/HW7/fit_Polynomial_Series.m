@@ -17,8 +17,7 @@ for j = 1:12
 end
 
 while err>tol
-    
     err = yData - A * bvec;
 end
 
-plot(xData, yData, '.b', 'LineWidth', 6);
+plot(xData, yData, '.b', 'MarkerSize', 6);
