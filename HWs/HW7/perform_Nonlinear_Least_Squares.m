@@ -35,8 +35,11 @@ function perform_Nonlinear_Least_Squares(N)
  end
  
  m = 20;
- plot(x,y,'-b', "LineWidth", 6)
+ plot(x,y,'-r', "LineWidth", 6)
+ hold on
  legend('Data','Model Fit');
+ plot(x,y,'.b', "MarkerSize", ms)
+ hold off
  
     function val = f(x,beta)
         val = beta(1) * exp(-((x - beta(2))^2)/(2 * (beta(3)^2)));
