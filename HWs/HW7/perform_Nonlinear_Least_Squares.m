@@ -11,7 +11,7 @@ function perform_Nonlinear_Least_Squares(N)
  % continues running script until the error value is less than the given
  % tolerance allowed
      for i = 1:N
-         x = data(i , 1);
+         x = data(i,1);
          expy = exp(-1 * ((x - beta(2))^2) / ((2 * beta(3))^2));
          J(i,1) = expy;
          J(i,2) = beta(1) * ((x - beta(2))/(beta(3))^2) * expy;

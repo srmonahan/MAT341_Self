@@ -8,9 +8,9 @@ for i = 1:length(xData)
     A = [1 xData(i)]
 end
 
-bvec = inv(A.' * A) * A.' * yData;
+bvec = inv(A.'* A) * A.'* yData;
 
-for j = 0:12
+for j = 1:12
     k = bvec(j) * xData(j);
 end
 
